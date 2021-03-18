@@ -1,0 +1,9 @@
+RewriteEngine On 
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^(www\.)?coepd\.us
+RewriteRule ^(.*)$ https://www.coepd.us/$1 [R,L]
+
+
+Options +FollowSymlinks
+
+RewriteRule ^(.*)\.html$ $1.php [nc]
